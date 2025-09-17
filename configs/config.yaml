@@ -1,0 +1,28 @@
+# configs/config.yaml
+data:
+  raw_path: "data/raw/sentiment labelled sentences"
+  processed_path: "data/processed"
+  train_file: "train.csv"
+  val_file: "val.csv"
+  test_file: "test.csv"
+
+model:
+  embedding_dim: 128
+  hidden_dim: 256
+  n_layers: 2
+  dropout: 0.3
+  seq_length: 50
+
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  n_epochs: 10
+  device: "cpu"  # или "cuda"
+
+tokenizer:
+  name: "bert-base-uncased"
+  max_length: 512
+
+evaluation:
+  max_gen_length: 20
+  temperature: 0.8
